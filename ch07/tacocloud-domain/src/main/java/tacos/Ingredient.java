@@ -2,6 +2,7 @@ package tacos;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 import lombok.AccessLevel;
 import lombok.Data;

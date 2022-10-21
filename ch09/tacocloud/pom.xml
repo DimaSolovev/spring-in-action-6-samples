@@ -49,7 +49,6 @@
 			<artifactId>tacocloud-ui</artifactId>
 			<version>${tacocloud.version}</version>
 		</dependency>
-
 		<!-- Run against embedded H2 database by default -->
 		<dependency>
 			<groupId>com.h2database</groupId>

@@ -21,5 +21,5 @@ spring:
         provider:
           tacocloud:
             issuer-uri: http://authserver:9000
-# end::provider_config[]
+
 

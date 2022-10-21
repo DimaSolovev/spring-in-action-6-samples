@@ -25,7 +25,8 @@ public class FileWriterIntegrationConfig {
 
   @Profile("javaconfig")
   @Bean
-  @Transformer(inputChannel="textInChannel",                  <!--1-->
+  //<!--1-->
+  @Transformer(inputChannel="textInChannel",
                outputChannel="fileWriterChannel")
   public GenericTransformer<String, String> upperCaseTransformer() {
     return text -> text.toUpperCase();
@@ -34,7 +35,8 @@ public class FileWriterIntegrationConfig {
   @Profile("javaconfig")
   @Bean
   @ServiceActivator(inputChannel="fileWriterChannel")
-  public FileWritingMessageHandler fileWriter() {             <!--2-->
+  //<!--2-->
+  public FileWritingMessageHandler fileWriter() {
     FileWritingMessageHandler handler =
         new FileWritingMessageHandler(new File("/tmp/sia6/files"));
     handler.setExpectReply(false);
